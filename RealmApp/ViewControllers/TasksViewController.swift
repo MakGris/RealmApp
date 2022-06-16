@@ -79,6 +79,9 @@ class TasksViewController: UITableViewController {
         
         return UISwipeActionsConfiguration(actions: [doneAction, deleteAction, editAction])
     }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
 // MARK: - Private methods
 

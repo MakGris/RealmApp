@@ -13,8 +13,7 @@ class TaskListViewController: UITableViewController {
     
     var taskLists: Results<TaskList>!
     
-    
-    override func viewDidLoad() {
+        override func viewDidLoad() {
         super.viewDidLoad()
         taskLists = StorageManager.shared.realm.objects(TaskList.self).sorted(byKeyPath: "date", ascending: false)
         let addButton = UIBarButtonItem(
